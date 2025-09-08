@@ -24,7 +24,7 @@ const SigninPage: React.FC = () => {
     try {
       setSubmitting(true);
       const response = await AuthApi.login(form);
-
+console.log(response);
       const error = checkError([response]);
       if (error) {
         setFormError(typeof error === "string" ? error : "Sign in failed");
